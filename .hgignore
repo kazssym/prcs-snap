@@ -1,0 +1,7 @@
+syntax: regexp
+# A 'prime' directory may be created by the 'snapcraft try' command
+(^|/)prime$
+\.snap$
+\.rej$
+\.orig$
+~$

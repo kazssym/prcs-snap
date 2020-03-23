@@ -1,0 +1,37 @@
+# snap/snapcraft.yaml
+# Copyright (C) 2020 Kaz Nishimura
+#
+# Copying and distribution of this file, with or without modification, are
+# permitted in any medium without royalty provided the copyright notice and
+# this notice are preserved.  This file is offered as-is, without any warranty.
+---
+name: prcs-vx68k
+title: PRCS by VX68k.org
+base: core
+version: "1.3.4.k2.1"
+summary: Unofficially updated PRCS for recent Linux-based systems
+description: |
+  PRCS is a legacy version control program.
+  This package provides a `prcs` command updated for recent Linux-based systems.
+license: GPL-2.0
+confinement: strict
+grade: devel
+apps:
+  prcs:
+    command: prcs
+    environment:
+      RCS_PATH: ${SNAP}/usr/bin
+parts:
+  prcs:
+    plugin: autotools
+    source: https://bitbucket.org/kazssym/prcs/downloads/prcs-1.3.4.k2.tar.gz
+    source-checksum: sha256/10ffa82faba9922db0e27d4ac801ff1d71d9336f6d2ba831795acfd7ac756eaa
+    build-packages:
+      - g++
+    stage-packages:
+      - rcs
+    configflags:
+      - SYS_RCS_COMMAND_PATH=/usr/bin/rcs
+      - SYS_CI_COMMAND_PATH=/usr/bin/ci
+      - SYS_CO_COMMAND_PATH=/usr/bin/co
+      - SYS_RLOG_COMMAND_PATH=/usr/bin/rlog

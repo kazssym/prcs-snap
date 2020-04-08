@@ -21,6 +21,8 @@ apps:
     command: prcs
     environment:
       RCS_PATH: ${SNAP}/usr/bin
+    plugs:
+      - home
 parts:
   prcs:
     plugin: autotools

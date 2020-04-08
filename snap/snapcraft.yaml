@@ -35,5 +35,6 @@ parts:
       - SYS_RLOG_COMMAND_PATH: /usr/bin/rlog
     build-packages:
       - g++
+      - rcs
     stage-packages:
       - rcs

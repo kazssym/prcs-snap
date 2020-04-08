@@ -26,12 +26,12 @@ parts:
     plugin: autotools
     source: https://bitbucket.org/kazssym/prcs/downloads/prcs-1.3.4.k2.tar.gz
     source-checksum: sha256/10ffa82faba9922db0e27d4ac801ff1d71d9336f6d2ba831795acfd7ac756eaa
+    build-environment:
+      - SYS_RCS_COMMAND_PATH: /usr/bin/rcs
+      - SYS_CI_COMMAND_PATH: /usr/bin/ci
+      - SYS_CO_COMMAND_PATH: /usr/bin/co
+      - SYS_RLOG_COMMAND_PATH: /usr/bin/rlog
     build-packages:
       - g++
     stage-packages:
       - rcs
-    configflags:
-      - SYS_RCS_COMMAND_PATH=/usr/bin/rcs
-      - SYS_CI_COMMAND_PATH=/usr/bin/ci
-      - SYS_CO_COMMAND_PATH=/usr/bin/co
-      - SYS_RLOG_COMMAND_PATH=/usr/bin/rlog

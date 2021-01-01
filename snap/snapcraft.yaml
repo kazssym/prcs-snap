@@ -8,7 +8,7 @@
 name: prcs-vx68k
 title: PRCS by VX68k.org
 base: core18
-version: "1.3.4.k2.1"
+version: "1.3.4.k2.2"
 summary: Unofficially updated PRCS for recent Linux-based systems
 description: |
   PRCS is a legacy version control program.
